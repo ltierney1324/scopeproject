@@ -13,7 +13,21 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here 
+// Your code here
+const recVolume = height => {
+  let dimensions = [height];
+
+  const innerFunc = (num) => {
+    if(dimensions.length < 3){
+      dimensions.push(num)
+    }
+    if(dimensions.length === 3){
+      return dimensions.reduce((acc, el) => acc*=el);
+    }
+    return ()=> {}
+  }
+  return innerFunc;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
