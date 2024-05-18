@@ -28,8 +28,24 @@ Example 4:
 
 ***********************************************************************/
 
-// Your code here 
+// Your code here
+const countDownTimer = (n) =>{
 
+  if(n>0){
+    return () =>{
+      n--;
+      if(n===1){
+        return ()=> "Happy New Year!"
+      }else{
+        n--;
+        return ()=> "Counting down to new years"
+      }
+    };
+
+  }else{
+    return () =>"Happy New Year!"
+  }
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
